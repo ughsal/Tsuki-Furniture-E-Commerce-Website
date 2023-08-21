@@ -1,0 +1,457 @@
+/* @import url(https://db.onlinewebfonts.com/c/d36f0c493e3736208e18680c144c0b91?family=Grenoble-Serial-RegularItalic+DB); */
+/*  */
+
+   /* @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Poppins:wght@200;300&family=REM:wght@300&family=Roboto+Condensed:wght@700&display=swap');  */
+  /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap'); */
+
+  @font-face {
+    font-family: 'Helvetica';
+    src: url(fonts/Helvetica-Bold.ttf); 
+}
+:root{
+  --primaryColor:	white ;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --bannerTransition: 0.3s ease;
+  --mainProductPriceFont: #222;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+body {
+  color: var(--mainBlack);
+  background:white;
+  /* font-family: 'Noto Serif JP'; */
+  font-family: 'Helvetica', sans-serif;
+}
+/* --------------- Navbar ---------------- */
+.navbar {
+  background: white;
+  position: sticky;
+  top: 0;
+  height: 7=80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background: var(--mainGrey); */
+  z-index: 1;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.nav-icon {
+  font-size: 2rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  
+  {
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Tranquility Queen Panel Bed",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "king panel bed",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "single panel bed",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "twin panel bed",
+        "price": 22.99,
+        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "fridge",
+        "price": 88.99,
+        "image": { "fields": { "file": { "url": "./images/product-5.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "dresser",
+        "price": 32.99,
+        "image": { "fields": { "file": { "url": "./images/product-6.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "couch",
+        "price": 45.99,
+        "image": { "fields": { "file": { "url": "./images/product-7.jpeg" } } }
+      }
+    },
+    {
+        
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "table",
+        "price": 33.99,
+        "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
+      }
+    }
+  ]
+}
+
+  /* top: -8px;
+  right: -8px;
+  background: var(--primaryColor);
+  padding: 0 5px;
+  border-radius: 30%;
+  color: var(--mainWhite); */
+}
+
+/* --------------- End of Navbar ---------------- */
+/* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(100vh - 60px);
+  background: url("./images/red-bedroom-chair.jpg") center/cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.banner {
+  
+  border-radius: 2%;
+  text-align: center;
+  background: rgb(198, 183, 155, 0.442);
+  /* opacity: 0.7; */
+  /* background: rgba(214, 212, 199, 0.4); */
+  /* background: rgba(76, 175, 80, 0.3); */
+  display: inline-block;
+  padding: 2rem;
+}
+.banner-title {
+    font-family: 'Breve';
+    /* transition:var(--bannerTransition); */
+  font-size: 3rem;
+  color:black;
+  text-transform: uppercase;
+  /* letter-spacing: var(--mainSpacing); */
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.7s, color 0.7s;
+}
+.banner-title:hover{
+    cursor: pointer;
+    font-family:'Noto Serif JP', sans-serif;
+  color: black;
+  background: transparent;
+
+}
+.banner-title-jap{
+    font-family: 'Noto Serif JP', serif;
+    margin-bottom: 3rem;
+}
+
+.banner-title, h1{
+opacity: 1;
+}
+.banner-btn {
+    border-radius: 5%;
+    border: 2px solid black;
+  padding: 1rem 3rem;
+  text-transform:uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  /* background: var(--primaryColor); */
+  background: #ddced1;
+  color: var(--mainBlack);
+  /* border: 1px solid var(--primaryColor); */
+  transition: var(--mainTransition);
+  cursor: pointer;
+  text-shadow: 0 1px;
+  font-family: 'Helvetica';
+}
+.banner-btn:hover {
+  background:  rgb(255, 255, 255, 0.6);
+  color: black;
+  font-family: 'Helvetica';
+}
+.cart-buy-btn, clear-cart-btn{
+    display: flexbox;
+    justify-content: center;
+
+}
+.signup-popup {
+    margin-bottom: 7px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.signup-form input[type="text"],
+    .signup-form input[type="email"] {
+        margin: 5px;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+
+.form-popup{
+    margin-bottom: 7px;
+}
+/* Styles for the signup form within the pop-up */
+.signup-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-buy-btn{
+    margin-top: 10px;
+}
+
+/* --------------- End of Hero ---------------- */
+
+/* --------------- Cart ---------------- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: var(--mainTransition);
+  background: rgb(0,0,0, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: var(--mainWhite);
+  z-index: 3;
+  /* background: rgb(231, 226, 221); */
+  background: white;
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+/*---------- Cart Item -------------------- */
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+    text-transform: capitalize;
+  color: #BA0F30;;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color:#BA0F30;;
+  cursor: pointer;
+}
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+  
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+ 
+}
+
+/* --------------- End of Cart ---------------- */
+
+/* --------------- Products ---------------- */
+
+.products {
+    /* text-shadow: #222 0 0.5px; */
+
+  padding: 4rem 0;
+}
+.section-title h2 {
+    font-family: 'Breve';
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.products-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.img-container {
+  border: 2px black;
+  position: relative;
+  overflow: hidden;
+}
+.bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background:#BA0F30;
+  color: #C6B79B;
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+}
+.bag-btn:hover {
+  color:white;
+}
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+  opacity: 0.5;
+}
+
+.product h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.product h4 {
+
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color:#BA0F30;
+  text-align: center;
+}
+
+.product{
+    font-family: 'Helvetica',sans-serif;
+}
+
+.submit-btn{
+    margin-top: 30px;
+    border-radius: 5%;
+    border: 1px solid #6e6e6e;
+  padding: 1rem 3rem;
+  text-transform:uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+  /* border: 1px solid var(--primaryColor); */
+  transition: var(--mainTransition);
+  cursor: pointer;
+  text-shadow: 0 1px;
+}

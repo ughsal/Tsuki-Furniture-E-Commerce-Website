@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Comfy House</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap"
+      rel="stylesheet"
+    /> -->
+  </head>
+  <body>
+    <div class="fonts">
+      <style>
+        .body {
+          width: 100%;
+        }
+        #insta-feed h2 {
+          font-size: 20px;
+          font-family: Helvetica;
+        }
+        /* @font-face {
+          font-family: Helvetica;
+          font-weight: 400;
+          font-style: normal;
+          src: url("//tsuki.market/cdn/fonts/helvetica/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2?h1=dHN1a2kubWFya2V0&h2=dHN1a2ktY28tdWsuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=719628b9dafbdedf5903ff2c9cae5c41b8c6016e075d97a3f900ab1aad1496f0")
+              format("woff2"),
+            url("//tsuki.market/cdn/fonts/helvetica/helvetica_n4.8bddb85c18a0094c427a9bf65dee963ad88de4e8.woff?h1=dHN1a2kubWFya2V0&h2=dHN1a2ktY28tdWsuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=ef4a9d99d7154828b41a6fcd3442ffca6487032e3126a58e523804a517aef986")
+              format("woff");
+        } */
+      </style>
+
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar-center">
+          <span class="nav-icon">
+            <i class="fas fa-bars"></i>
+          </span>
+          <img src="./images/TSUKI_180x.png" alt="store logo" />
+
+          <div class="cart-btn">
+            <span class="nav-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
+        </div>
+      </nav>
+      <!-- end of navbar -->
+      <!-- hero -->
+      <header class="hero">
+        <div class="banner">
+          <h1
+            class="banner-title"
+            id="hoveredElement"
+            onmouseover="changeTextOnHover()"
+            onmouseout="resetTextOnMouseOut()"
+          >
+            Tsuki Tranquility Collection
+          </h1>
+          <h1 class="banner-title-jap">プレミアムコレクション!</h1>
+          <button on click="#insta-feed" class="banner-btn" id="prod-btn">
+            <b> shop now 月 </b>
+          </button>
+        </div>
+      </header>
+      <!-- end of hero -->
+
+      <!-- products -->
+      <section class="products">
+        <div class="section-title">
+          <h2>ALWAYS ETHICALLY SOURCED</h2>
+        </div>
+        <div class="products-center" id="prods">
+          <!-- single product -->
+          <!-- <article class="product">
+          <div class="img-container">
+            <img
+              src="./images/product-1.jpeg"
+              alt="product"
+              class="product-img"
+            />
+            <button class="bag-btn" data-id="1">
+              <i class="fas fa-shopping-cart"></i>
+              add to bag
+            </button>
+          </div>
+          <h3>queen bed</h3>
+          <h4>clear16</h4>
+        </article> -->
+          <!-- end of single product -->
+        </div>
+      </section>
+      <!-- end of products -->
+      <!-- cart -->
+      <div class="cart-overlay">
+        <div class="cart">
+          <span class="close-cart"><i class="far fa-window-close"></i></span>
+          <h2>your cart</h2>
+          <div class="cart-content">
+            <!-- cart item -->
+            <!-- <div class="cart-item">
+            <img src="./images/product-1.jpeg" alt="product" />
+            <div>
+              <h4>queen bed</h4>
+              <h5>$9.00</h5>
+              <span class="remove-item">remove</span>
+            </div>
+            <div>
+              <i class="fas fa-chevron-up"></i>
+              <p class="item-amount">
+                1
+              </p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div> -->
+            <!-- cart item -->
+          </div>
+          <div class="cart-footer">
+            <h3>your total : $<span class="cart-total">0</span></h3>
+            <button class="clear-cart banner-btn">clear cart</button>
+            <button class="cart-buy-btn banner-btn" id="buyButton">
+              Buy Now
+            </button>
+
+            <div class="signup-popup" id="signupPopup">
+              <div class="signup-form">
+                <h2>Sign Up</h2>
+                <form class="form-popup" action="connect.php" method="post">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required /><br />
+
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required /><br />
+
+                  <label for="address">Address:</label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    required
+                  /><br />
+
+                  <input class="submit-btn" type="submit" value="Submit" />
+                </form>
+              </div>
+            </div>
+
+            <script>
+              // Function to display the signup pop-up
+              function showSignupPopup() {
+                document.getElementById("signupPopup").style.display = "block";
+              }
+
+              // Function to hide the signup pop-up
+              function hideSignupPopup() {
+                document.getElementById("signupPopup").style.display = "none";
+              }
+
+              // Add event listener to the Buy Now button
+              document
+                .getElementById("buyButton")
+                .addEventListener("click", showSignupPopup);
+              document.addEventListener("click", function (event) {
+                var signupPopup = document.getElementById("signupPopup");
+                var buyButton = document.getElementById("buyButton");
+
+                if (
+                  event.target === signupPopup &&
+                  event.target !== buyButton
+                ) {
+                  hideSignupPopup();
+                }
+              });
+            </script>
+            <!-- <button id="buyButton" class="banner-btn">Buy Now</button> -->
+
+            <!-- <script>
+              // Redirect to the signup page when the Buy button is clicked
+              document
+                .getElementById("buyButton")
+                .addEventListener("click", function () {
+                  window.location.href = "signup_page.html";
+                });
+            </script> -->
+          </div>
+        </div>
+      </div>
+      <!-- end of cart -->
+      <!-- contentful -->
+      <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+      <!--  javascript -->
+      <script src="app.js"></script>
+    </div>
+  </body>
+</html>
+
+<!-- <?php
+if (isset($_POST['buyButton'])) {
+    // Redirect to the signup page
+    header("Location: signup_page.php");
+    exit(); // Ensure that no further code is executed after the redirection
+}
+?>
+<section id="signup_page">
+<h2>Sign Up</h2>
+<p>Provide your information to complete the purchase:</p>
+
+<!-- Signup Form 
+<form action="connect.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br>
+
+    <input type="submit" value="Submit">
+</form>
+</section> -->
